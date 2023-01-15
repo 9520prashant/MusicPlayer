@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+.mid {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    /* border: 2px solid rgba(59, 59, 59, 0.38); */
+    /* border-radius: 28px; */
+    text-align: center;
+    background-color: transparent;
+}
+.navbar {
+    display: inline-block;
+
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbar li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 52px 6px;
+}
+
+.navbar li a:hover,
+.navbar li a:active {
+    text-decoration: underline;
+    color: rgb(211, 139, 139);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background{
+    transform: translateZ(-80px) scale(10);
+}
+.foreground{
+    transform: translateZ(-7px) scale(2);
+    position: absolute;
+    top: 50px;
+    height: 50%;
+    width:50%;
+}
+.logo{
+    position: absolute;
+    left: 2px;
+    top: 30px;
+}
+.background, .foreground{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+h1{
+    cursor: pointer;
+    position: absolute;
+    font-family: "poppins", "sans-serif";
+     top: 5rem;
+     left: 80%;
+     font-size: 3rem;
+     color: rgb(0, 0, 0);
+     text-shadow: 0 0 10px rgb(9, 244, 134);
+    transform: translateX(-50%);
+    letter-spacing: 4px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(211, 139, 139);
+}
